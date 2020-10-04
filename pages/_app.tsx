@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import React from 'react';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { config } from '../globals';
+import Head from 'next/head'
+import React from 'react'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
+import { config } from '../globals'
 
 const App: React.FC = ({ Component, pageProps }: any) => {
   return (
@@ -49,17 +49,22 @@ const App: React.FC = ({ Component, pageProps }: any) => {
           min-height: 100%;
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         }
 
         * {
           box-sizing: border-box;
         }
+        a {
+          text-decoration: none;
+        }
+        ul {
+          list-style-type: none;
+        }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

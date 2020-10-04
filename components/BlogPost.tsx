@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Markdown } from './Markdown';
-import { PostData } from '../loader';
-import { PostMeta } from './PostMeta';
-import { Author } from './Author';
+import { Markdown } from './Markdown'
+import { PostData } from '../loader'
+import { PostMeta } from './PostMeta'
+import { Author } from './Author'
+import { SocialShare } from './SocialShare'
 
-export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({
-  post,
-}) => {
-  const { title, subtitle } = post;
+export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({ post }) => {
+  const { title, subtitle } = post
 
   return (
     <div
@@ -33,6 +32,7 @@ export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({
             src={post.bannerPhoto}
           />
         )}
+        <SocialShare post={post} />
         <div style={{ padding: '50px 3vw 50px 3vw' }}>
           {title && (
             <h1
@@ -75,5 +75,5 @@ export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

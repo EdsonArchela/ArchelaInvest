@@ -1,10 +1,10 @@
-import React from 'react';
-import { format } from 'fecha';
-import { PostData } from '../loader';
-import { Tag } from './Tag';
+import React from 'react'
+import { format } from 'fecha'
+import { PostData } from '../loader'
+import { Tag } from './Tag'
 
 export const PostCard: React.FC<{ post: PostData }> = (props) => {
-  const post = props.post;
+  const post = props.post
   return (
     <a
       href={`/${post.path}`}
@@ -15,7 +15,7 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        height: '300px',
+        height: '400px',
       }}
     >
       <div
@@ -42,11 +42,8 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
             style={{
               background: `url(${post.thumbnailPhoto}) no-repeat center center`,
               backgroundSize: 'cover',
-              // backgroundImage: post.thumb_image,
-              // backgroundPosition: 'cover',
               width: '100%',
               flex: 1,
-              // height: '200px',
             }}
           />
         )}
@@ -72,19 +69,22 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
               {post.title}
             </h2>
           )}
-          {false && post.subtitle && (
+          {post.subtitle && post.subtitle && (
             <p
               style={{
+                maxLines: 6,
                 margin: '0px',
                 padding: '0px',
                 fontSize: '12pt',
                 color: '#333333',
+                maxHeight: 75,
+                overflow: 'hidden',
               }}
             >
               {post.subtitle}
             </p>
           )}
-          <p style={{ opacity: 0.6, textAlign: 'center', margin: '0px' }}>
+          <p style={{ opacity: 0.6, textAlign: 'center', margin: '1rem 0px 0 0' }}>
             {props.post.datePublished
               ? format(new Date(props.post.datePublished), 'MMMM Do, YYYY')
               : ''}
@@ -98,5 +98,5 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
         </div>
       </div>
     </a>
-  );
-};
+  )
+}
