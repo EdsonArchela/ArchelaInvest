@@ -1,7 +1,7 @@
 {
   "name": "archela_invest",
   "version": "0.1.0",
-  "description": "A Medium inspired dev blog starter for Next.js",
+  "description": "Assessoria de investimentos credenciada à XP investimentos. Conteúdos educacionais sobre investimentos que te ajudam a entender melhor o mercado e investir melhor.",
   "author": "Edson Archela",
   "scripts": {
     "dev": "next dev",
