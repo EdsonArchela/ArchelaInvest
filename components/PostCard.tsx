@@ -1,5 +1,6 @@
 import React from 'react'
-import { format } from 'fecha'
+import {format} from 'date-fns'
+import pt from 'date-fns/locale/pt-BR'
 import { PostData } from '../loader'
 import { Tag } from './Tag'
 
@@ -86,7 +87,7 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
           )}
           <p style={{ opacity: 0.6, textAlign: 'center', margin: '1rem 0px 0 0' }}>
             {props.post.datePublished
-              ? format(new Date(props.post.datePublished), 'MMMM Do, YYYY')
+              ? format(new Date(props.post.datePublished), "dd 'de' MMMM, yyyy", { locale: pt })
               : ''}
           </p>
           <div style={{ flex: 1 }}> </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 // import { gwen } from 'gwen';
-import { format } from 'fecha';
+import {format} from 'date-fns'
+import pt from 'date-fns/locale/pt-BR'
 
 import { PostData } from '../loader';
 import { config } from '../globals';
@@ -74,7 +75,7 @@ export const AuthorLines: React.FC<{ post: PostData }> = (props) => {
 
       <p style={{ opacity: 0.6, ...lineStyle }}>
         {props.post.datePublished
-          ? format(new Date(props.post.datePublished), 'MMMM Do, YYYY')
+          ? format(new Date(props.post.datePublished), "dd 'de' MMMM, yyyy", { locale: pt })
           : ''}
       </p>
 
