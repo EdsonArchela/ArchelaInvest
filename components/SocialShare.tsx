@@ -16,7 +16,7 @@ export const SocialShare: React.FC<{ post: PostData }> = ({ post }) => {
   return (
     <div className="container">
       <FacebookShareButton
-        url={`archelainvest.com.br/${post.path}`}
+        url={`http://archelainvest.com.br/${post.path}`}
         quote={post.title}
         className="Demo__some-network__share-button"
       >
@@ -24,20 +24,20 @@ export const SocialShare: React.FC<{ post: PostData }> = ({ post }) => {
       </FacebookShareButton>
 
       <TwitterShareButton
-        url={`archelainvest.com.br/${post.path}`}
+        url={`http://archelainvest.com.br/${post.path}`}
         title={post.title}
         className="Demo__some-network__share-button"
       >
         <TwitterIcon size={size} round />
       </TwitterShareButton>
       <PinterestShareButton
-        url={`archelainvest.com.br/${post.path}`}
-        media={`archelainvest.com.br/${`archelainvest.com.br/${post.thumbnailPhoto}`}`}
+        url={`http://archelainvest.com.br/${post.path}`}
+        media={`archelainvest.com.br/${`http://archelainvest.com.br/${post.thumbnailPhoto}`}`}
         className="Demo__some-network__share-button"
       >
         <PinterestIcon size={size} round />
       </PinterestShareButton>
-      <WhatsappShareButton url={`archelainvest.com.br/${post.path}`} title={post.title}>
+      <WhatsappShareButton url={`http://archelainvest.com.br/${post.path}`} title={post.title}>
         <WhatsappIcon size={size} round />
       </WhatsappShareButton>
     </div>
