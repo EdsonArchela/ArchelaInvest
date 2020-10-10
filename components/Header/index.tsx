@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { config } from '../../globals'
 import style from './header-style.module.scss'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 

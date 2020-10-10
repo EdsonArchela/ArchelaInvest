@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { PostData, loadBlogPosts, loadMarkdownFile } from '../loader'
+import { PostData, loadBlogPosts } from '../loader'
 import { PostCard } from '../components/PostCard'
 import { generateRSS } from '../rssUtil'
 import style from './index.module.scss'
+import { useMemo } from 'react'
 
 const sectionStyle = {
   width: '100%',
@@ -13,11 +13,14 @@ const sectionStyle = {
   alignItems: 'center',
 } as const
 
-const Home = (props: { introduction: string; posts: PostData[] }) => {
-  const router = useRouter()
-  const routeChange = (path: string): void => {
-    router.push(path)
-  }
+const Home = (props: { posts: PostData[] }) => {
+  const introduction_path = useMemo(()=>{
+    const dummy = props.posts.find(
+      (post) =>
+        post.path.includes('introduction')
+    )
+    return dummy? dummy.path : ''
+  },[])
   return (
     <div style={{ width: '100%', maxWidth: 1200 }}>
       <Head>
@@ -36,13 +39,7 @@ const Home = (props: { introduction: string; posts: PostData[] }) => {
             Investimentos!
           </p>
           <a
-            href={`/${
-              props.posts.find(
-                (post) =>
-                  post.title ===
-                  'O que faz um Agente Autônomo de Investimentos ou Assessor de Investimentos?'
-              )?.path || ''
-            }`}
+            href={`/${introduction_path}`}
           >
             LEIA MAIS
           </a>
@@ -71,14 +68,12 @@ const Home = (props: { introduction: string; posts: PostData[] }) => {
 export default Home
 
 export const getStaticProps = async () => {
-  const introduction = await loadMarkdownFile('introduction.md')
-
   const posts = await loadBlogPosts()
 
   // comment out to turn off RSS generation
   // during build step.
   await generateRSS(posts)
 
-  const props = { introduction, posts }
+  const props = { posts }
   return { props }
 }

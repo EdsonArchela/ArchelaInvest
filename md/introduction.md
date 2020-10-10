@@ -1,5 +1,5 @@
 ---
-title: O que faz um Agente Autônomo de Investimentos ou Assessor de Investimentos?
+title: O que faz um Assessor de Investimentos?
 published: true
 datePublished: 1577847600000
 author: Edson Archela
@@ -11,7 +11,7 @@ thumbnailPhoto: /post-assets/investidor.jpg
 canonicalUrl: https://archelainvest.com.br
 ---
 
-# O que faz um Agente Autônomo de Investimentos ou Assessor de Investimentos?
+# O que faz um Assessor de Investimentos?
 
 O agente autônomo de investimentos, popularmente conhecido como assessor
 de investimentos tem como principal função a prestação de informações

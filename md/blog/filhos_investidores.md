@@ -2,7 +2,7 @@
 title: Saiba como orientar seus filhos para o mercado financeiro
 subtitle: Quer uma dica de presente para o dia das crianças? Comece investir em renda variável com seus filhos. Eles logo entenderão a importância de investir em coisas que têm valor pra eles de modo prático, ao invés de pouparem em algo que desconhecem.
 published: true
-datePublished: 1592350859000
+datePublished: 1602338995000
 author: Rosely Archela
 tags:
   - Investimentos
