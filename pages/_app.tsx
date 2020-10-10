@@ -16,6 +16,8 @@ const App: React.FC = ({ Component, pageProps }: any) => {
       }}
     >
       <Head>
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      
         {config.googleAnalyticsId && (
           <script
             async
