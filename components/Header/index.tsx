@@ -76,6 +76,11 @@ export const Header: React.FC = () => (
             </Link>
           </li>
           <li>
+            <Link href="/calculators/retirement">
+              <a>Calculadoras</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/about">
               <a>Sobre mim</a>
             </Link>
