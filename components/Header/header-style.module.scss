@@ -140,3 +140,24 @@
     }
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .MenuBar {
+    ul {
+      display: block;
+      overflow: hidden;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    li,
+    h1 {
+      display: inline;
+      padding: 1rem;
+    }
+    li:nth-child(4):before {
+      display: block;
+      content: '';
+    }
+  }
+}
