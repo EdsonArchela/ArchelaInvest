@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import style from './calculator_detail.module.scss'
-import { Button, createMuiTheme, InputAdornment, makeStyles } from '@material-ui/core';
+import { InputAdornment, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   color: {
     margin:'1rem 0',
   backgroundColor: '#9ba78a'
