@@ -1,8 +1,9 @@
 import style from './about.module.scss'
+import Image from 'next/image'
 
 const About = () => (
   <section className={style.content}>
-    <img src="/assets/0.jpg" alt="Edson Archela" />
+    <Image src="/assets/0.jpg" alt="Edson Archela" width='200' height='200'/>
     <h1>Edson Archela</h1>
     <p>
       Olá, minha história no mundo dos investimentos teve início durante o período em que estava

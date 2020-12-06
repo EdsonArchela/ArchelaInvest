@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import {format} from 'date-fns'
 import pt from 'date-fns/locale/pt-BR'
 import { PostData } from '../loader'
@@ -39,14 +40,15 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
         }}
       >
         {post.thumbnailPhoto && (
-          <div
-            style={{
-              background: `url(${post.thumbnailPhoto}) no-repeat center center`,
-              backgroundSize: 'cover',
-              width: '100%',
-              flex: 1,
-            }}
-          />
+          <Image src={post.thumbnailPhoto} layout='responsive' width='600' height='300' />
+          // <div
+          //   style={{
+          //     background: `url(${post.thumbnailPhoto}) no-repeat center center`,
+          //     backgroundSize: 'cover',
+          //     width: '100%',
+          //     flex: 1,
+          //   }}
+          // />
         )}
         <div
           style={{

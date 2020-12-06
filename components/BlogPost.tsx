@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image';
 import { Markdown } from './Markdown'
 import { PostData } from '../loader'
 import { PostMeta } from './PostMeta'
@@ -22,13 +22,9 @@ export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({ post }) 
       <PostMeta post={post} />
       <div style={{ width: '100%', maxWidth: '600px' }}>
         {post.bannerPhoto && (
-          <img
-            style={{
-              width: '100%',
-              // maxHeight: '350px',
-              maxWidth: '100%',
-              margin: '0px',
-            }}
+          <Image
+          width='600'
+          height='300'
             src={post.bannerPhoto}
           />
         )}

@@ -1,4 +1,7 @@
 import style from './contact.module.scss'
+
+import Image from 'next/image';
+
 import {
   FaFacebook,
   FaInstagram,
@@ -11,7 +14,7 @@ import {
 const Contact = () => (
   <div className={style.container}>
     <div className={style.contactImg}>
-      <img src="/assets/contact-image.jpg" alt="Contato" />
+      <Image src="/assets/contact-image.jpg" alt="Contato" height='350' width='700' />
       <a href="https://www.freepik.com/free-photos-vectors/business">
         Business photo created by dashu83 - www.freepik.com
       </a>
